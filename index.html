@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bmiمحاسبه</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="mainContainer">
+    <div id="container">
+      <p id="error">Lorem ipsumrro delectus blanditiis dignissimos facere ipsam voluptatum!</p>
+      <div id="main-left">
+        <img src="img/BMI-m.png" alt="" />
+      </div>
+      <div id="main-right">
+        <h2>شاخص توده بدنی-bmiمحاسبه</h2>
+        <div class="main-radio">
+          <div class="radio-man">
+            <input type="radio" class="radio-btn" value="man" name="gender-selector" id="radio1" />
+            <label for="radio1">آقا هستم</label>
+          </div>
+          <div class="radio-woman">
+            <input type="radio" class="radio-btn" value="woman" name="gender-selector" id="radio2" checked />
+            <label for="radio2">خانم هستم</label>
+          </div>
+        </div>
+        <div class="inputs">
+          <div id="age-button"><input type="number" placeholder="سن" /></div>
+          <div id="height-button"><input type="number" placeholder="قد" /></div>
+          <div id="weight-button"><input type="number" placeholder="وزن" /></div>
+          <div class="calculate-btn">
+            محاسبه کن
+          </div>
+        </div>
+
+      </div>
+      <div id="modal">
+
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
