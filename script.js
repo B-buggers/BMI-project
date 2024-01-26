@@ -6,6 +6,7 @@ let weightButton = document.querySelector('#weight-button input')
 let calculateBtn = document.querySelector('.calculate-btn')
 let error = document.querySelector('#error')
 let modal = document.querySelector('#modal')
+let reset = document.getElementById('but')
 
 calculateBtn.addEventListener('click', calculate)
 
@@ -58,4 +59,10 @@ function calculateBMI() {
 function showResultBmi() {
     modal.style.display = 'flex'
     modal.innerHTML += calculateBMI()
+}
+function dontshow() {
+    modal.style.display = 'none'
+    ageButton.value = ''
+    heightButton.value = ''
+    weightButton = ''
 }
