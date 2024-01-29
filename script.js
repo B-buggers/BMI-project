@@ -6,6 +6,8 @@ let weightButton = document.querySelector('#weight-button input')
 let calculateBtn = document.querySelector('.calculate-btn')
 let error = document.querySelector('#error')
 let modal = document.querySelector('#modal')
+let spanModal = document.querySelector('#num')
+let textModal = document.querySelector('#text')
 let reset = document.getElementById('but')
 
 
@@ -61,7 +63,9 @@ function calculateBMI() {
 
 function showResultBmi() {
     modal.style.display = 'flex'
-    modal.innerHTML += calculateBMI()
+  num.innerHTML = calculateBMI()
+text.innerHTML = textToBmi()
+
 }
 reset.addEventListener('click' , dontShow)
 
@@ -71,7 +75,23 @@ reset.addEventListener('click' , dontShow)
     ageButton.value = ''
     heightButton.value = ''
     weightButton.value= ''
-    modal.innerHTML  =  " "
+ 
+    num.innerHTML = " "
+    text.innerHTML = " "
 
  }
 
+ function textToBmi() {
+     let bmi = calculateBMI();
+     let user
+     if (bmi < 18.5) {
+         user = 'کمبود وزن'
+     }
+     else if (bmi <= 24.9) {
+         user = 'وزن نرمال'
+     }
+     else if (bmi <= 29.9) {
+         user = 'اضافه وزن'
+     }
+     return user
+ }
